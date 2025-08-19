@@ -28,3 +28,4 @@ function layerDiscountShoppingCart(quantity){
         return total
     }
 }
+layerDiscountShoppingCart(20)
