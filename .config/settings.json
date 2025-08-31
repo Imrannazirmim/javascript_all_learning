@@ -1,0 +1,410 @@
+{
+  "ui_font_size": 16,
+  "buffer_font_size": 14,
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_features": {
+    "liga": true,
+    "calt": true
+  },
+  "ui_font_family": "Zed Plex Sans",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "cursor_blink": false,
+  "show_whitespaces": "selection",
+  "show_wrap_guides": true,
+  "wrap_guides": [80, 100, 120],
+  "preferred_line_length": 100,
+  "soft_wrap": "preferred_line_length",
+  "tab_size": 2,
+  "hard_tabs": false,
+  "format_on_save": "on",
+  "code_actions_on_format": {
+    "source.organizeImports": true,
+    "source.removeUnusedImports": true,
+    "source.fixAll.eslint": true
+  },
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true,
+  "show_inline_completions": true,
+  "show_completions_on_input": true,
+  "show_completion_documentation": true,
+  "auto_signature_help": true,
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true,
+      "delay_ms": 600
+    }
+  },
+  "project_panel": {
+    "button": true,
+    "default_width": 300,
+    "dock": "left",
+    "git_status": true
+  },
+  "terminal": {
+    "dock": "bottom",
+    "default_height": 400,
+    "working_directory": "current_project_directory",
+    "font_size": 14,
+    "font_family": "JetBrains Mono"
+  },
+  "assistant": {
+    "enabled": true,
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20241022"
+    },
+    "dock": "right",
+    "default_width": 400
+  },
+  "tasks": {
+    "live-server": {
+      "label": "🚀 Live Server",
+      "command": "npx",
+      "args": [
+        "live-server",
+        "--port=5500",
+        "--host=localhost",
+        "--open",
+        "--watch=.",
+        "--ignore=node_modules,dist,build",
+        "--cors"
+      ],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "live-server-3000": {
+      "label": "🌐 Live Server (Port 3000)",
+      "command": "npx",
+      "args": [
+        "live-server",
+        "--port=3000",
+        "--host=localhost",
+        "--open",
+        "--watch=.",
+        "--ignore=node_modules,dist,build",
+        "--cors"
+      ],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "react-dev": {
+      "label": "⚛️ React Dev Server",
+      "command": "npm",
+      "args": ["start"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "react-build": {
+      "label": "📦 React Build",
+      "command": "npm",
+      "args": ["run", "build"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "vite-dev": {
+      "label": "⚡ Vite Dev Server",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "node-dev": {
+      "label": "🟢 Node.js Dev (nodemon)",
+      "command": "npx",
+      "args": ["nodemon", "${file}"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "node-start": {
+      "label": "🚀 Node.js Start",
+      "command": "node",
+      "args": ["${file}"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "npm-install": {
+      "label": "📦 NPM Install",
+      "command": "npm",
+      "args": ["install"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "python-server": {
+      "label": "🐍 Python HTTP Server",
+      "command": "python3",
+      "args": ["-m", "http.server", "8000"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "python-run": {
+      "label": "🐍 Run Python File",
+      "command": "python3",
+      "args": ["${file}"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": true
+    },
+    "eslint-fix": {
+      "label": "🔧 ESLint Fix All",
+      "command": "npx",
+      "args": ["eslint", ".", "--fix"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "prettier-format": {
+      "label": "✨ Prettier Format All",
+      "command": "npx",
+      "args": ["prettier", "--write", "."],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "type-check": {
+      "label": "🔍 TypeScript Check",
+      "command": "npx",
+      "args": ["tsc", "--noEmit"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "tailwind-watch": {
+      "label": "🎨 Tailwind Watch",
+      "command": "npx",
+      "args": [
+        "tailwindcss",
+        "-i",
+        "./src/styles/input.css",
+        "-o",
+        "./public/styles/output.css",
+        "--watch"
+      ],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "tailwind-build": {
+      "label": "🎨 Tailwind Build",
+      "command": "npx",
+      "args": [
+        "tailwindcss",
+        "-i",
+        "./src/styles/input.css",
+        "-o",
+        "./public/styles/output.css",
+        "--minify"
+      ],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    },
+    "serve-current": {
+      "label": "🌐 Serve Current Directory",
+      "command": "python3",
+      "args": ["-m", "http.server", "3000"],
+      "use_new_terminal": true,
+      "allow_concurrent_runs": false
+    }
+  },
+  "keymap": [
+    {
+      "context": "Editor",
+      "bindings": {
+        "cmd+shift+l": "task::spawn live-server",
+        "ctrl+shift+l": "task::spawn live-server",
+        "cmd+shift+r": "task::spawn react-dev",
+        "ctrl+shift+r": "task::spawn react-dev",
+        "cmd+shift+v": "task::spawn vite-dev",
+        "ctrl+shift+v": "task::spawn vite-dev",
+        "cmd+shift+n": "task::spawn node-dev",
+        "ctrl+shift+n": "task::spawn node-dev",
+        "cmd+shift+e": "task::spawn eslint-fix",
+        "ctrl+shift+e": "task::spawn eslint-fix",
+        "cmd+shift+p": "task::spawn prettier-format",
+        "ctrl+shift+p": "task::spawn prettier-format",
+        "cmd+shift+t": "task::spawn type-check",
+        "ctrl+shift+t": "task::spawn type-check",
+        "cmd+shift+i": "task::spawn npm-install",
+        "ctrl+shift+i": "task::spawn npm-install",
+        "cmd+shift+w": "task::spawn tailwind-watch",
+        "ctrl+shift+w": "task::spawn tailwind-watch"
+      }
+    }
+  ],
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    "**/node_modules",
+    "**/dist",
+    "**/build",
+    "**/.next",
+    "**/.nuxt",
+    "**/coverage",
+    "**/.nyc_output",
+    "**/vendor",
+    "**/logs",
+    "**/__pycache__",
+    "**/.pytest_cache",
+    "**/.venv",
+    "**/venv",
+    "**/.env.local",
+    "**/.env.development.local",
+    "**/.env.test.local",
+    "**/.env.production.local",
+    "**/package-lock.json",
+    "**/yarn.lock",
+    "**/pnpm-lock.yaml",
+    "**/target",
+    "**/.idea"
+  ],
+  "auto_save": "on_focus_change",
+  "auto_update_extensions": true,
+  "languages": {
+    "HTML": {
+      "tab_size": 2,
+      "formatter": "prettier"
+    },
+    "CSS": {
+      "tab_size": 2,
+      "formatter": "prettier"
+    },
+    "SCSS": {
+      "tab_size": 2,
+      "formatter": "prettier"
+    },
+    "JavaScript": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true,
+        "source.removeUnusedImports": true
+      }
+    },
+    "JSX": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true,
+        "source.removeUnusedImports": true
+      }
+    },
+    "TSX": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+        "source.fixAll.eslint": true
+      }
+    },
+    "Python": {
+      "tab_size": 4,
+      "formatter": {
+        "external": {
+          "command": "black",
+          "arguments": ["--stdin-filename", "${file}", "-"]
+        }
+      },
+      "format_on_save": "on"
+    },
+    "JSON": {
+      "tab_size": 2,
+      "formatter": "prettier"
+    },
+    "YAML": {
+      "tab_size": 2,
+      "formatter": "prettier"
+    },
+    "Markdown": {
+      "tab_size": 2,
+      "formatter": "prettier",
+      "soft_wrap": "preferred_line_length",
+      "preferred_line_length": 80
+    },
+    "Vue": {
+      "tab_size": 2,
+      "formatter": "prettier"
+    },
+    "Svelte": {
+      "tab_size": 2,
+      "formatter": "prettier"
+    }
+  },
+  "lsp": {
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "includeInlayParameterNameHints": "all",
+          "includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+          "includeInlayFunctionParameterTypeHints": true,
+          "includeInlayVariableTypeHints": true,
+          "includeInlayPropertyDeclarationTypeHints": true,
+          "includeInlayFunctionLikeReturnTypeHints": true,
+          "includeInlayEnumMemberValueHints": true
+        }
+      }
+    },
+    "eslint": {
+      "settings": {
+        "codeActionOnSave": {
+          "mode": "all"
+        },
+        "format": true,
+        "run": "onType",
+        "validate": "on"
+      }
+    }
+  },
+  "vim_mode": false,
+  "restore_on_startup": "last_workspace",
+  "confirm_quit": false,
+  "active_pane_magnification": 1.0,
+  "hover_popover_delay": 300,
+  "scrollbar": {
+    "show": "auto",
+    "cursors": true,
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "diagnostics": true
+  },
+  "search": {
+    "whole_word": false,
+    "case_sensitive": false,
+    "include_ignored": false,
+    "regex": false
+  },
+  "outline_panel": {
+    "dock": "right",
+    "default_width": 320
+  },
+  "base_keymap": "VSCode",
+  "collaboration_panel": {
+    "dock": "left",
+    "default_width": 240
+  },
+  "use_on_type_format": true,
+  "diagnostics": {
+    "include_warnings": true
+  },
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  }
+}
